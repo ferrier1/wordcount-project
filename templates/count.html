@@ -1,0 +1,16 @@
+<h1>Results</h1>
+<a href="{% url 'home' %}">Start Again</a>
+<h1>Your Text:</h1>
+{{ fulltext }}
+
+<h1>Word Count:</h1>
+{{ word_count }}
+
+<h1>Word Frequency:</h1>
+
+{% for word, count in sorted_word_list %}
+
+{{ word }} -- {{ count }}
+<br />
+
+{% endfor %}
